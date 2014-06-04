@@ -1,0 +1,427 @@
+/*-----------------------------
+Stylesheet for Clay Documentation
+------------------------------*/
+
+
+body {
+    font-family: 'Josefin Slab', serif;
+    color:#4d4d4d;
+    background-image: url(//localhost:3000/3vot/vivaelmenu/assets/viva-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-size: 16px;
+}
+
+
+/*
+Colors
+*/
+
+.text-inverse {
+    color: #fff;
+}
+.text-danger {
+    color:#fa4747;
+}
+.list-group-item-danger {
+    color: #fff;
+    background-color: #fa4747;
+}
+
+/*---------------
+Page Header
+----------------*/
+
+header {
+    background-image: url(//localhost:3000/3vot/vivaelmenu/assets/back_header.png);
+    background-repeat: repeat-x;
+    height: 60px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 2px 1px rgba(255,255,255,.1);
+    -moz-box-shadow: 0 2px 1px rgba(255,255,255,.1);
+    box-shadow: 0 2px 1px rgba(255,255,255,.1);
+    height: 11em;
+    background-color: rgba(188,91,39,.2);
+}
+
+.logo {
+    background-image: url(//localhost:3000/3vot/vivaelmenu/assets/viva-logo.png);
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 120px; 
+    width: 175px;
+    display: inline-block;
+    margin-top: 20px 
+}
+header h1 {
+    color: #fff;
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(0,0,0,.6);
+}
+
+
+/*---------------
+Tabs
+-----------------*/
+
+a.list-group-item {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+/*
+FirstLevel Tabs
+*/
+
+.tab-menu{
+    background-image: url(//localhost:3000/3vot/vivaelmenu/assets/tab-bg.png);
+    background-repeat: repeat-x;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    font-size: 1.2em;
+}
+.tab-menu .list-group {
+   margin: 0; 
+   line-height: 1.5em;
+}
+.tab-menu .list-group-item {
+    display: inline-block; 
+    padding: 1em 1em;
+    font-size: 1.2em;
+    color: #feb063;
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    border-right: 2px solid ;
+    border-color: rgba(0,0,0,.1);
+}
+
+
+a.list-group-item, 
+a.list-group-item:hover, 
+a.list-group-item:focus {
+    background-color: transparent;
+    color: #fff;
+}
+
+a.list-group-item.active, 
+a.list-group-item.active:hover, 
+a.list-group-item.active:focus {
+    background-color: transparent;
+    border-color: rgba(0,0,0,.1);    
+}
+
+.tab-list>.viva-tab-content:not(.active),
+.subtab-list .viva-tab-content:not(.active){
+    display: none;
+}
+
+
+
+.tab-menu .list-group-item {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+
+
+/*--------------
+Main-Section
+---------------*/
+
+.main-Section {
+    margin: 2em 0 0;
+}
+.subtab-list .viva-tab-content {
+    background-color: #fff;
+    padding: 0.1em 2em 3em;
+    margin: 0 0 6em;
+    min-height: 30em
+}
+.tab-submenu .list-group {
+    margin: 0;
+}
+.tab-submenu .list-group-item.active,
+.tab-submenu .list-group-item:hover {
+    background-color: rgba(0,0,0,.2);
+}
+.tab-submenu .list-group-item.active:after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #c73838;
+}
+.tab-submenu .list-group-item {
+    border-bottom: 1px solid #fff;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.viva-tab-content h2 {
+    font-weight: 600;
+    color: #fa4747;
+}
+
+
+/*Sublevel Tabs*/
+.tab-submenu {
+    background-color: #fa4747; 
+}
+
+.tab-submenu .list-group-item {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.subtab-list .nav-tabs li {
+    width: 33%;
+}
+
+.tab-menu .dropdown-menu .list-group-item{
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: .7em 1em 2em;
+    text-shadow: 0 0 0 #000;
+    border-bottom: 1px solid #fff;
+}
+.tab-menu .dropdown-menu {
+    left:35;
+}
+
+/*
+Restaurants
+*/
+
+.figure-link, .figure-link:hover {
+    text-decoration: none;
+    font-weight: 600;
+}
+.figure-link figcaption {
+    color: #4d4d4d;
+    font-size: .9em;
+}
+figure>div {
+    max-height: 12em;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: .2em;
+    background-image: url(//localhost:3000/3vot/vivaelmenu/assets/loading.gif);
+    -webkit-background-size: 30px 30px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 8em;
+}
+figure img {
+    
+    width: 100%;
+    
+}
+.figure-link:hover figure img {
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+}
+
+/*
+Carousel
+*/
+.carousel-inner>.item>img, .carousel-inner>.item>a>img{
+    width: 100%;
+}
+    
+/*div.claysf-tab-menu div.list-group>a.active:after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;  
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #fb4d2f;
+}*/
+
+
+
+/*
+Bootstrap Override
+*/
+
+.glyphicon {
+    top:2px;
+    font-size: 80%;
+    margin: 0 .2em;
+}
+.hideon-mobile {
+    display: block;
+}
+.showon-mobile {
+    display: none;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a:focus {
+    background-color: rgba(0,0,0,.05);
+}
+
+.tab-content {
+    margin: 0 0 1em ;
+    border-left: 2px solid #f5f5f6;
+}
+
+/*Media Queries for VivaElMenu Docs*/
+@media (max-width: 992px) and (min-width: 0px){
+    .logo {
+        height: 96px;
+        width: 140px;
+    }
+    header {
+        height: 9em;
+    }
+    header h1 {
+        font-size: 1.5em;
+        width: 66%;
+    }
+    .subtab-list .nav-tabs li {
+        width: 48%;
+    }   
+}
+
+@media (max-width: 768px) and (min-width: 0px){
+    header{
+        -webkit-background-size: 50px 40px;
+        background-size: 50px 40px;
+        height: 8em;
+    }
+    header h1 {
+        width: 60%;
+    }
+    .hideon-mobile {
+        display: none;
+    }
+    .showon-mobile {
+        display: block;
+    }
+    .tab-menu .list-group-item {
+        padding: .7em 0;
+        width: 100%;
+        height: 2.4em;
+    }
+    .tab-submenu .list-group-item.active:after {
+        display: none;
+    }
+    .subtab-list .nav-tabs{
+        text-align: center;
+    }
+    .subtab-list .nav-tabs li {
+        width: 46%;
+        float: none;
+        display: inline-block;
+        margin: auto;
+        vertical-align: top;
+        text-align: left;
+    }
+    .subtab-list .viva-tab-content {
+        padding: 0;
+    }
+    .viva-tab-content h2 {
+        color: #fff;
+        background-color: #fa4747;
+        margin: 0;
+        line-height: 1.5em;
+        font-weight: 400;
+        text-align: center;
+    }
+    .dropdown {
+        width: 49%;
+        display: inline-block;
+    }
+    .dropdown-menu {
+        background-color: #fa4747;
+        padding: 0;
+    }
+    figure > div {
+        max-height: 15em;
+    }
+    figure img {
+        width: 100%;
+        max-height: 15em;
+    }
+    .carousel {
+        margin: 1em 0 0 ;
+    }
+}
+@media (max-width: 468px) and (min-width: 0px){
+    .logo{
+        height: 66px;
+        width: 96px;
+        margin: 1em 0;
+    }
+    header{
+        background-image: none;
+        height: auto;
+
+    }
+    header h1 {
+        width: 55%;
+        font-size: 1.2em;
+        vertical-align: top;
+    }
+    .dropdown {
+        width: 48%;
+    }
+    figure h3{
+        font-size: 1em;
+        font-weight: 600;   
+    }
+    .figure-link {
+        padding: .2em!important
+    }
+    .figure-link figcaption {
+        font-size: .8em;
+    }
+    figure img {
+        width: 100%;
+    }
+    .viva-tab-content h2 {
+        margin: 0 0 .5em 0;
+    }
+    .viva-tab-content h2 .glyphicon{
+        margin: 0 0 0 -1em;
+    }
+    .subtab-list .viva-tab-content {
+        min-height: 18em;
+        padding: 0 0 1em 0
+    }
+    .tab-menu .dropdown-menu {
+        left: 0;
+    }
+}

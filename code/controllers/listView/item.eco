@@ -1,0 +1,11 @@
+<li class="restaurant_list_item" data-id="<%= @id %>">
+  <a class="figure-link" href="#pizzahut" data-toggle="tab">
+    <figure>
+      <div>
+        <img src=<%= @photo %> alt="">
+      </div>
+      <h3 class="text-danger"><%= @name %></h3>
+      <figcaption>El Gusto de Estar Juntos.</figcaption>
+    </figure>
+  </a>
+</li>

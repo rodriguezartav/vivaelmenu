@@ -1,0 +1,8 @@
+<a data-id="<%= @id %>" class="list-group-item category_list_item">
+	<%= @name %>
+
+	<% if @flag: %>
+		<span class="glyphicon glyphicon-bookmark"></span>
+	<% end %>
+
+</a>

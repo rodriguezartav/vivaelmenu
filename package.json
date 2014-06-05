@@ -13,10 +13,10 @@
 	},
 	"name": "vivaelmenu",
 	"description": "",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"threevot": {
 		"user_name": "3vot",
-		"version": "8",
+		"version": "9",
 		"displayName": "vivaelmenu",
 		"size": "small",
 		"screens": {

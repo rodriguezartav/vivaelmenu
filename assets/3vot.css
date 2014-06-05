@@ -153,6 +153,12 @@ Main-Section
     margin: 0 0 6em;
     min-height: 30em
 }
+.subtab-list{
+    background-color: #fff;
+    padding: 0.1em 2em 3em;
+    margin: 0 0 6em;
+    min-height: 30em
+}
 .tab-submenu .list-group {
     margin: 0;
 }

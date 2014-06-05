@@ -25,8 +25,8 @@ function init(package, options){
   _3vot.user_name = package.threevot.user_name;
   _3vot.endpoint= options.endpoint || "http://backend.3vot.com/v1";
   _3vot.frontpoint= options.frontpoint || "http://daulau2emlz5i.cloudfront.net";
-  _3vot.domain= options.domain || "//localhost:3000";
-  _3vot.path= _3vot.domain+"/"+_3vot.user_name+"/"+package.name;
+  _3vot.domain= options.domain || "//daulau2emlz5i.cloudfront.net";
+  _3vot.path= _3vot.domain+"/"+_3vot.user_name+"/"+package.name+"_9";
   _3vot.host= _3vot.frontpoint.split("://")[1];
   _3vot.el = document.getElementById('_3vot_' + package.name);
   _3vot.app = package.name;
@@ -103,10 +103,10 @@ module.exports={
 	},
 	"name": "vivaelmenu",
 	"description": "",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"threevot": {
 		"user_name": "3vot",
-		"version": "8",
+		"version": "9",
 		"displayName": "vivaelmenu",
 		"size": "small",
 		"screens": {

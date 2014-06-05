@@ -74,7 +74,7 @@ module.exports = function(__obj) {
     
       __out.push(__sanitize(this.name));
     
-      __out.push('\n      <button class="btn btn-default btn-lg pull-right text-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>\n      <button class="btn btn-default btn-lg pull-right text-primary"><span class="glyphicon glyphicon-thumbs-up"></span></button>\n    </h3>\n</div><!--/Column-->\n\n<div class="col-md-8">\n  <!--Carousel-->\n  <div id="carousel-fabbrica" class="carousel slide" data-ride="carousel">\n      <div class="carousel-inner">\n          <div class="item">\n            <img data-src="" alt="First slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica1.jpg">   \n          </div>\n          <div class="item">\n            <img data-src="" alt="Second slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica2.jpg">\n          </div>\n          <div class="item active">\n            <img data-src="" alt="Third slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica3.jpg">\n          </div>\n      </div><!--/Carousel Inner--> \n\n      <a class="left carousel-control" href="#carousel-fabbrica" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>\n      <a class="right carousel-control" href="#carousel-fabbrica" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>\n\n  </div><!--/Carousel-->\n</div><!--Column-->\n\n<div class="col-md-4">\n    <ul class="list-group">\n      <li class="list-group-item list-group-item-danger">Detalles</li>\n      <li class="list-group-item"><b>Dirección:</b> ');
+      __out.push('\n      <button class="btn btn-default btn-lg pull-right text-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>\n      <button class="btn btn-default btn-lg pull-right text-primary"><span class="glyphicon glyphicon-thumbs-up"></span></button>\n    </h3>\n</div><!--/Column-->\n\n<div class="col-md-8">\n  <!--Carousel-->\n  <div id="carousel-fabbrica" class="carousel slide" data-ride="carousel">\n      <div class="carousel-inner">\n          <div class="item">\n            <img data-src="" alt="First slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica1.jpg">   \n          </div>\n          <div class="item">\n            <img data-src="" alt="Second slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica2.jpg">\n          </div>\n          <div class="item active">\n            <img data-src="" alt="Third slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica3.jpg">\n          </div>\n      </div><!--/Carousel Inner--> \n\n      <a class="left carousel-control" href="#carousel-fabbrica" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>\n      <a class="right carousel-control" href="#carousel-fabbrica" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>\n\n  </div><!--/Carousel-->\n</div><!--Column-->\n\n<div class="col-md-4">\n    <ul class="list-group">\n      <li class="list-group-item list-group-item-danger">Detalles</li>\n      <li class="list-group-item"><b>Dirección:</b> ');
     
       __out.push(__sanitize(this.direccion));
     
@@ -550,14 +550,14 @@ var fields = ["name", "photo", "description", "zona", "precio","direccion"];
 
 Restaurant = _3Model.Model.setup("Restaurant", fields);
 
-Restaurant.create( { direccion: "Escazu 100 Este", name: "Rest1" , precio: "Hasta $12", zona: "San Jose", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Rest2" , precio: "Hasta $12", zona: "Heredia", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "San2" , precio: "Hasta $12", zona: "Alajuela", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Pedro5" , precio: "Hasta $12", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Pedro6" , precio: "Hasta $12", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Pedro7" , precio: "Hasta $12", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Pedro8" , precio: "$12 a $20", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Pedro9" , precio: "$12 a $20", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica-thumb.jpg"  } )
+Restaurant.create( { direccion: "Escazu 100 Este", name: "La Fabbrica" , precio: "Hasta $12", zona: "San Jose", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica-thumb.jpg"  } )
+Restaurant.create( { name: "Le Monastère" , precio: "Hasta $12", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/monastere-thumb.jpg"  } )
+Restaurant.create( { name: "Pizza Hut" , precio: "Hasta $12", zona: "Alajuela", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/pizzahut-thumb.jpg"  } )
+Restaurant.create( { name: "Carl's Jr, Plaza Real Cariari" , precio: "Hasta $12", zona: "Heredia", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/carlsjr-thumb.jpg"  } )
+Restaurant.create( { name: "Château 1525" , precio: "Hasta $12", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/chateau-thumb.jpg"  } )
+Restaurant.create( { name: "Tin Jo" , precio: "Hasta $12", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/tinjo-thumb.jpg"  } )
+Restaurant.create( { name: "Neo Gastrobar, San Pedro" , precio: "$12 a $20", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/neogastro-thumb.jpg"  } )
+Restaurant.create( { name: "Café Kracovia" , precio: "$12 a $20", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/kracovia-thumb.jpg"  } )
 
 
 Restaurant.selected;

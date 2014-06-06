@@ -1,12 +1,15 @@
 <h2><span class="glyphicon glyphicon-map-marker"></span><span id="selectedCategory"></span></h2>
 
-<div id="detailView"></div>
+<div class="col-md-12">
+	<div class="row">
+		<div id="detailView"></div>
+	</div>
+</div>
 
-<div id="listView">
-
-	
-<ul class="nav nav-tabs" id="item_list">
-
-</ul>
-
+<div class="col-md-12">
+	<div class="row">
+		<div id="listView">
+			<ul class="nav nav-tabs" id="item_list"></ul>
+		</div>
+	</div>
 </div>

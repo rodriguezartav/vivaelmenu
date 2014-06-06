@@ -70,15 +70,43 @@ module.exports = function(__obj) {
   }
   (function() {
     (function() {
-      __out.push('\n<div class="col-md-12">\n    <h3 class="h2">');
+      __out.push('<div class="col-md-12">\n    <h3 class="h2 targetScroll">');
     
-      __out.push(__sanitize(this.name));
+      __out.push(__sanitize(this.name + ", " + this.zona));
     
-      __out.push('\n      <button class="btn btn-default btn-lg pull-right text-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>\n      <button class="btn btn-default btn-lg pull-right text-primary"><span class="glyphicon glyphicon-thumbs-up"></span></button>\n    </h3>\n</div><!--/Column-->\n\n<div class="col-md-8">\n  <!--Carousel-->\n  <div id="carousel-fabbrica" class="carousel slide" data-ride="carousel">\n      <div class="carousel-inner">\n          <div class="item">\n            <img data-src="" alt="First slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica1.jpg">   \n          </div>\n          <div class="item">\n            <img data-src="" alt="Second slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica2.jpg">\n          </div>\n          <div class="item active">\n            <img data-src="" alt="Third slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica3.jpg">\n          </div>\n      </div><!--/Carousel Inner--> \n\n      <a class="left carousel-control" href="#carousel-fabbrica" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>\n      <a class="right carousel-control" href="#carousel-fabbrica" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>\n\n  </div><!--/Carousel-->\n</div><!--Column-->\n\n<div class="col-md-4">\n    <ul class="list-group">\n      <li class="list-group-item list-group-item-danger">Detalles</li>\n      <li class="list-group-item"><b>Dirección:</b> ');
+      __out.push('\n      <button class="btn btn-default btn-lg pull-right text-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>\n      <button class="btn btn-default btn-lg pull-right text-primary"><span class="glyphicon glyphicon-thumbs-up"></span></button>\n    </h3>\n</div><!--/Column-->\n\n<div class="col-md-8">\n  <!--Carousel-->\n  <div id="carousel-fabbrica" class="carousel slide" data-ride="carousel">\n      <div class="carousel-inner" id="slidesView">\n        <div class="item">\n          <img src=');
     
-      __out.push(__sanitize(this.direccion));
+      __out.push(__sanitize(this.pics[0]));
     
-      __out.push('</li>\n      <li class="list-group-item">Compartir</li>\n      <li class="list-group-item">Facebook</li>\n      <li class="list-group-item"><b>Nombre del Retaurante:</b> La Fabbrica</li>\n      <li class="list-group-item"><b>Zona:</b> Escazu</li>\n      <li class="list-group-item"><b>Sucursales:</b> No</li>\n      <!-- Open Map Modal Trigger -->\n      <li class="list-group-item">\n        <a href="" class="btn btn-block" data-toggle="modal" data-target="#myModal">\n          <span class="glyphicon glyphicon-hand-right"></span>\n          Ver mapa\n        </a>\n      </li>\n      <!--/ Open Map Modal Trigger -->\n    </ul>\n</div><!--/Column-->\n</div>\n<!--/SubTab Restaurant La FAbbrica-->');
+      __out.push(' alt="">\n        </div>\n        <div class="item active">\n          <img src=');
+    
+      __out.push(__sanitize(this.pics[1]));
+    
+      __out.push(' alt="">\n        </div>\n        <div class="item">\n          <img src=');
+    
+      __out.push(__sanitize(this.pics[2]));
+    
+      __out.push(' alt="">\n        </div>\n      </div><!--/Carousel Inner--> \n\n      <a class="left carousel-control" href="#carousel-fabbrica" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>\n      <a class="right carousel-control" href="#carousel-fabbrica" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>\n\n  </div><!--/Carousel-->\n</div><!--Column-->\n\n<div class="col-md-4">\n    <ul class="list-group">\n      <li class="list-group-item list-group-item-danger">Detalles</li>\n      <li class="list-group-item"><b><span class="glyphicon glyphicon-usd"></span>Precios:</b> ');
+    
+      __out.push(__sanitize(this.price));
+    
+      __out.push('</li>\n      <li class="list-group-item"><b>Zona:</b> ');
+    
+      __out.push(__sanitize(this.zona));
+    
+      __out.push('</li>\n      <li class="list-group-item"><b>Dirección:</b> ');
+    
+      __out.push(__sanitize(this.address));
+    
+      __out.push('</li>\n      <li class="list-group-item"><b>Horario</b> ');
+    
+      __out.push(__sanitize(this.schedule));
+    
+      __out.push('</li>\n      <li class="list-group-item"><b>Teléfono</b> ');
+    
+      __out.push(__sanitize(this.phone));
+    
+      __out.push('</li>\n      <!-- Open Map Modal Trigger -->\n      <li class="list-group-item">\n        <a href="" class="btn btn-block" data-toggle="modal" data-target="#myModal">\n          <span class="glyphicon glyphicon-hand-right"></span>\n          Ver mapa\n        </a>\n      </li>\n      <!--/ Open Map Modal Trigger -->\n    </ul>\n</div><!--/Column-->\n</div>\n<!--/SubTab Restaurant La FAbbrica-->');
     
     }).call(this);
     
@@ -183,19 +211,23 @@ module.exports = function(__obj) {
   }
   (function() {
     (function() {
-      __out.push('<li class="restaurant_list_item" data-id="');
+      __out.push('<li class="restaurant_list_item scroll" data-id="');
     
       __out.push(__sanitize(this.id));
     
-      __out.push('">\n  <a class="figure-link" href="#pizzahut" data-toggle="tab">\n    <figure>\n      <div>\n        <img src=');
+      __out.push('" >\n  <a class="figure-link" href="" data-toggle="tab" >\n    <figure>\n      <div>\n        <img src=');
     
-      __out.push(__sanitize(this.photo));
+      __out.push(__sanitize(this.thumb));
     
       __out.push(' alt="">\n      </div>\n      <h3 class="text-danger">');
     
-      __out.push(__sanitize(this.name));
+      __out.push(__sanitize(this.name + ", " + this.address));
     
-      __out.push('</h3>\n      <figcaption>El Gusto de Estar Juntos.</figcaption>\n    </figure>\n  </a>\n</li>');
+      __out.push('</h3>\n      <figcaption>');
+    
+      __out.push(__sanitize(this.description));
+    
+      __out.push('</figcaption>\n    </figure>\n  </a>\n</li>');
     
     }).call(this);
     
@@ -290,7 +322,7 @@ module.exports = function(__obj) {
   }
   (function() {
     (function() {
-      __out.push('<h2><span class="glyphicon glyphicon-map-marker"></span><span id="selectedCategory"></span></h2>\n\n<div id="detailView"></div>\n\n<div id="listView">\n\n\t\n<ul class="nav nav-tabs" id="item_list">\n\n</ul>\n\n</div>');
+      __out.push('<h2><span class="glyphicon glyphicon-map-marker"></span><span id="selectedCategory"></span></h2>\n\n<div class="col-md-12">\n\t<div class="row">\n\t\t<div id="detailView"></div>\n\t</div>\n</div>\n\n<div class="col-md-12">\n\t<div class="row">\n\t\t<div id="listView">\n\t\t\t<ul class="nav nav-tabs" id="item_list"></ul>\n\t\t</div>\n\t</div>\n</div>\n');
     
     }).call(this);
     
@@ -322,7 +354,7 @@ function onZonaClick(){
 }
 
 function onPrecioClick(){
-	loadFirstCategory("precio")
+	loadFirstCategory("price")
 }
 
 function loadFirstCategory(type){
@@ -499,7 +531,7 @@ module.exports = function(__obj) {
 },{}],12:[function(require,module,exports){
 var fs = require("fs");
 
-_3vot.el.innerHTML = "<!--Header-->\n  <header>\n    <div class=\"container\">\n      <div class=\"col-md-12 col-sm-12\">\n        <a href=\"\" class=\"logo\"></a>\n        <h1>La guía más completa de Costa Rica</h1>\n      </div>\n    </div>\n  </header>\n<!--/Header-->\n\n<!--Main Section-->\n<section class=\"main-section\">\n  <!--Container--> \n  \n  <div class=\"container\" id=\"mainMenu\">\n  \t\n\t \t<div class=\"col-md-12  tab-menu\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"list-group\">\n\n\t\t\t\t\t<a href=\"#\" class=\"list-group-item active text-center btn_zona\">\n\t\t      \t<span class=\"glyphicon glyphicon-map-marker\"></span>Buscar por Zona\n\t\t       </a>\n\n\t\t\t\t\t<a href=\"#\" class=\"list-group-item text-center btn_precio\">\n\t\t        <span class=\"glyphicon glyphicon-usd\"></span>Buscar por Precio\n\t\t      </a>\n\n\t\t\t\t</div><!--List Group-->\n\t\t\t</div><!--Row-->\n\t\t</div>\n\n  </div>\n\n  <div class=\"container\" id=\"mainMenu\">\n\t  <div class=\"col-md-12 col-sm-12 subsections\">\n\t      <div class=\"row\">\n\t        <!--Main Menu Tab List-->\n\n\t          <!-- Price Content -->\n\t          <div class=\"viva-tab-content\" id=\"price\">\n\t              <div class=\"tab-submenu col-md-2 col-sm-2\">\n\t                  <div class=\"row\">\n\n\t                      <div class=\"list-group\" id=\"sideMenu\">\n\t                       \n\t                      </div><!--List Group-->\n\n\t                  </div><!--/Row-->  \n\t              </div><!--/Column Submenu-->\n\t    \n\t              <div class=\"subtab-list col-md-10 col-sm-10\" id=\"mainContent\">\n\n\t              </div><!--/ Column Subtab -->            \n\t          </div><!--/ Price Content -->\n\n\t        </div>\n\t        <!--/ Main Menu Tab List -->\n\n\t      </div><!--/ Row -->\n\t    </div>\n\t\t</div>\n</section>\n\n";
+_3vot.el.innerHTML = "<!--Header-->\n  <header >\n    <div class=\"container\">\n      <div class=\"col-md-12 col-sm-12\">\n        <a href=\"\" class=\"logo\"></a>\n        <h1>La guía más completa de Costa Rica</h1>\n      </div>\n    </div>\n  </header>\n<!--/Header-->\n\n<!--Main Section-->\n<section class=\"main-section\">\n  <!--Container--> \n  \n  <div class=\"container\" id=\"mainMenu\">\n  \t\n\t \t<div class=\"col-md-12  tab-menu\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"list-group\">\n\n\t\t\t\t\t<a href=\"#\" class=\"list-group-item active text-center btn_zona\">\n\t\t      \t<span class=\"glyphicon glyphicon-map-marker\"></span>Buscar por Zona\n\t\t       </a>\n\n\t\t\t\t\t<a href=\"#\" class=\"list-group-item text-center btn_precio\">\n\t\t        <span class=\"glyphicon glyphicon-usd\"></span>Buscar por Precio\n\t\t      </a>\n\n\t\t\t\t</div><!--List Group-->\n\t\t\t</div><!--Row-->\n\t\t</div>\n\n  </div>\n\n  <div class=\"container\" id=\"mainMenu\">\n\t  <div class=\"col-md-12 col-sm-12 subsections\">\n\t      <div class=\"row\">\n\t        <!--Main Menu Tab List-->\n\n\t          <!-- Price Content -->\n\t          <div class=\"viva-tab-content\" id=\"price\">\n\t              <div class=\"tab-submenu col-md-2 col-sm-2\">\n\t                  <div class=\"row\">\n\n\t                      <div class=\"list-group\" id=\"sideMenu\">\n\t                       \n\t                      </div><!--List Group-->\n\n\t                  </div><!--/Row-->  \n\t              </div><!--/Column Submenu-->\n\t    \n\t              <div class=\"subtab-list col-md-10 col-sm-10\" id=\"mainContent\">\n\n\t              </div><!--/ Column Subtab -->            \n\t          </div><!--/ Price Content -->\n\n\t        </div>\n\t        <!--/ Main Menu Tab List -->\n\n\t      </div><!--/ Row -->\n\t    </div>\n\t\t</div>\n</section>\n\n";
 
 var MainMenu = require("./controllers/mainMenu")
 
@@ -514,42 +546,13 @@ MainContent("mainContent")
 
 require("./managers/loadManager");
 
-/*
-//1: Define the Template to load when Device type is Desktop
 
+$(".scroll").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".targetScroll").offset().top
+    }, 1000);
+});
 
-    $(".tab-menu>div.row>div.list-group a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $(".tab-list>div.viva-tab-content").removeClass("active");
-        $(".tab-list>div.viva-tab-content").eq(index).addClass("active");
-    });
-
-    $("#zone .tab-submenu a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("#zone .subtab-list .viva-tab-content").removeClass("active");
-        $("#zone .subtab-list .viva-tab-content").eq(index).addClass("active");
-    });
-
-   
-    $("#price .tab-submenu a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("#price .subtab-list .viva-tab-content").removeClass("active");
-        $("#price .subtab-list .viva-tab-content").eq(index).addClass("active");
-        console.log(index);   
-    });
-
-// var yes = require("./main");
-
-*/
 },{"./controllers/mainContent":6,"./controllers/mainMenu":8,"./controllers/sideMenu":10,"./managers/loadManager":13,"fs":1}],13:[function(require,module,exports){
 
 Category = require("../model/category")
@@ -586,10 +589,10 @@ Category.create( { name: "San Pedro" , type: "zona", flag: false  } )
 
 
 
-Category.create( { name: "Más de $30" , type: "precio", flag: true  } )
-Category.create( { name: "De $20 a $30" , type: "precio", flag: false  } )
-Category.create( { name: "De $12 a $20" , type: "precio", flag: false  } )
-Category.create( { name: "Hasta $12" , type: "precio", flag: false  } )
+Category.create( { name: "Más de $30" , type: "price", flag: true  } )
+Category.create( { name: "De $20 a $30" , type: "price", flag: false  } )
+Category.create( { name: "De $12 a $20" , type: "price", flag: false  } )
+Category.create( { name: "Hasta $12" , type: "price", flag: false  } )
 
 
 
@@ -600,18 +603,164 @@ module.exports = Category;
 var _3Model = require("3vot-model/lib/ajaxless")
 
 
-var fields = ["name", "photo", "description", "zona", "precio","direccion"]; 
+var fields = ["name", "thumb", "description", "zona", "price","address", "phone", "pics", "schedule"]; 
 
 Restaurant = _3Model.Model.setup("Restaurant", fields);
 
-Restaurant.create( { direccion: "Escazu 100 Este", name: "La Fabbrica" , precio: "Hasta $12", zona: "San Jose", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/fabbrica-thumb.jpg"  } )
-Restaurant.create( { name: "Le Monastère" , precio: "Hasta $12", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/monastere-thumb.jpg"  } )
-Restaurant.create( { name: "Pizza Hut" , precio: "Hasta $12", zona: "Alajuela", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/pizzahut-thumb.jpg"  } )
-Restaurant.create( { name: "Carl's Jr, Plaza Real Cariari" , precio: "Hasta $12", zona: "Heredia", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/carlsjr-thumb.jpg"  } )
-Restaurant.create( { name: "Château 1525" , precio: "Hasta $12", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/chateau-thumb.jpg"  } )
-Restaurant.create( { name: "Tin Jo" , precio: "Hasta $12", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/tinjo-thumb.jpg"  } )
-Restaurant.create( { name: "Neo Gastrobar, San Pedro" , precio: "$12 a $20", zona: "Escazu", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/neogastro-thumb.jpg"  } )
-Restaurant.create( { name: "Café Kracovia" , precio: "$12 a $20", zona: "San Pedro", photo: "//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9_5/assets/kracovia-thumb.jpg"  } )
+Restaurant.create( { 
+	name: "La Fabbrica", 
+	address: "San Pedro",
+	description: "La razón de ser de nuestra marca es ofrecer en Costa Rica y posteriormente Centroamérica.",
+	phone: "2234-7209",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/03/lf7.jpg", "http://vivaelmenu.com/wp-content/uploads/2013/03/lfspedro.jpg","http://vivaelmenu.com/wp-content/uploads/2013/03/lf7.jpg"],
+	price: "De $12 a $20",
+	schedule: "De Lunes a Domingo, de 12 md - 10 pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/03/lfspedro-150x105.jpg" ,
+	zona: "San Pedro",
+} )
+Restaurant.create( { 
+	name: "La Oliva Verde" , 
+	address: "San Pedro",
+	description :"Acércate al Mediterráneo",
+	phone: "2280-2908",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/03/983581_10151717162743454_794602047_n.png", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/1003128_10151704860443454_1163806011_n.png",
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/1011776_10151718772488454_830129345_n.png"],
+	price: "Hasta $12",
+	schedule: "De Lunes a Viernes, 11 am - 8 pm; Viernes y Sábado, 11 am - 6 pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/03/554057_10150769914303454_207681160_n-150x105.jpg" ,
+	zona: "San Pedro"
+} )
+Restaurant.create( { 
+	name: "Château 1525" , 
+	address: "San Jose",
+	description :"Cada instante una inspiración!",
+	phone: "2248-9337",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/04/cha2.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/04/cha3.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/04/cha4.jpg"],
+	price: "De $20 a $30",
+	schedule: "Horario: Lunes, 11 am - 3 pm; Martes a Sábado, 11 am - 3 pm y 6 pm- 10 pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/04/chalogo-150x105.jpg" ,
+	zona: "San Jose"
+} )
+Restaurant.create( { 
+	name: "Tin Jo" , 
+	address: "San Jose",
+	description :"Tin Jo es el restaurante asiático de mayor tradición en Costa Rica.",
+	phone: "2221-7605",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/03/tj5.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/tj1.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/tj2.jpg"],
+	price: "De $20 a $30",
+	schedule: "De Lunes a Jueves, 11 am - 3pm y 5 pm - 10 pm; Viernes y Sábado, 11 am - 3 pm y 5 pm - 11 pm; Domingos, 11 am - 9 pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/03/tjlogo-150x105.jpg" ,
+	zona: "San Jose"
+} )
+Restaurant.create( { 
+	name: "Teriyaki" , 
+	address: "Plaza Real Cariari",
+	description :"Vive la experiencia Teriyaki",
+	phone: "2221-7605",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/02/teriyaki4.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/02/teriyaki3.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/02/969388_10151436631663157_2137316138_n.jpg"],
+	price: "Hasta $12",
+	schedule: "---", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/02/969388_10151436631663157_2137316138_n1-150x105.jpg" ,
+	zona: "Heredia"
+} )
+Restaurant.create( { 
+	name: "Carl's Jr" , 
+	address: "Plaza Real Cariari",
+	description :"En Carl's Jr. te ofrecemos sólo los mejores productos.",
+	phone: "2221-7605",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/02/ce4d6257e2649086c3c79a01a59bb768_w395_h269_cp3.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/02/27a15e7a373376058acf887d0299dfe3_w395_h269_cp2.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/02/3991142c3d2f653a2bae612e8f010d46_w395_h269_cp3.jpg"],
+	price: "Hasta $12",
+	schedule: "De Domingo a Jueves, 10am - 9pm; Viernes y Sábados, 10am - 10pm.", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/02/carls-jr13-150x105.jpg" ,
+	zona: "Heredia"
+} )
+Restaurant.create( { 
+	name: "Le Monastère" , 
+	address: "Escazu",
+	description :"Una experiencia mística.",
+	phone: "2228-8515",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/03/im5.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/im7.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/im6.jpg"],
+	price: "De $20 a $30",
+	schedule: "De Lunes a Sábado, 6 pm - 11 pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/03/imlogo-150x105.jpg" ,
+	zona: "Escazu"
+} )
+Restaurant.create( { 
+	name: "Mekong Asia Fusion" , 
+	address: "Escazu",
+	description :"Sabores auténticos del río Mekong con una presentación moderna.",
+	phone: "2208-8998",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/02/one-of-our-appetizers-FILEminimizer.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/02/one-of-our-appetizers-FILEminimizer.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/02/one-of-our-appetizers-FILEminimizer.jpg"],
+	price: "De $20 a $30",
+	schedule: "Lunes a Viernes, 12pm - 3pm; 6pm - 11pm, Sábado, 12pm - 11pm, Domingo, 12pm - 6pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/02/mekong-asia-fusion-FILEminimizer-150x105.jpg" ,
+	zona: "Escazu"
+} )
+Restaurant.create( { 
+	name: "Il Padrino" , 
+	address: "Avenida Escazú",
+	description :"Servicio personalizado, comida fresca y saludable... 'La comida e´cosa nostra'",
+	phone: "2288-6057",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/04/ip1.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/04/ip3.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/04/ip4.jpg"],
+	price: "De $12 a $20",
+	schedule: "De Lunes a Domingo, 11am - 9pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/04/admin-ajax.php_-150x105.jpg" ,
+	zona: "Escazu"
+} )
+Restaurant.create( { 
+	name: "Andiamo La" , 
+	address: "Curridabat",
+	description :"¡Verdadera y auténtica comida italiana!",
+	phone: "2272-1838",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2014/02/33742323_nJsFFLd2OerswSJK-j0hDOHKkpohu-CWMb7SNgWUEh4.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2014/02/39036702_j13n48vh6Kzemg5cKekg2d_riLjcUNoTH5Pe4lRFIrw.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2014/02/43993415_mIBq9xpqg7-yNzeDZRpHINKsRgtsPaWJm8St8WP6MYw.jpg"],
+	price: "Más de $30",
+	schedule: "De Lunes a Miercoles, 12md - 10pm; Jueves a Sabado, 12md - 11pm, Domingo 12md - 6pm", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2014/02/39036702_j13n48vh6Kzemg5cKekg2d_riLjcUNoTH5Pe4lRFIrw-150x105.jpg" ,
+	zona: "Escazu"
+} )
+Restaurant.create( { 
+	name: "L’ile de France" , 
+	address: "Escazú",
+	description :"Treinta años de tradición culinaria que se funden con el más cuidado ambiente contemporáneo, dan como resultado una experiencia única.",
+	phone: "2272-1838",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/06/255327_394423737262258_540968028_n.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/06/313816_519737671397530_1274505525_n.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/06/314465_252958828075417_920518992_n.jpg"],
+	price: "Más de $30",
+	schedule: "De Lunes a Sábado de 12md - 11pm, Domingos de 12md - 5pm.", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/06/549145_352173244820641_1706104582_n-150x105.jpg" ,
+	zona: "Escazu"
+} )
+Restaurant.create( { 
+	name: "Olio" , 
+	address: "Barrio Escalante",
+	description : "Comida Mediterránea y Española.",
+	phone: "2281-0541",
+	pics: ["http://vivaelmenu.com/wp-content/uploads/2013/03/olio5a8599.jpg", 
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/olio2.jpg",
+			"http://vivaelmenu.com/wp-content/uploads/2013/03/554712_498188626897302_1378464852_n.jpg"],
+	price: "De $20 a $30",
+	schedule: "De Lunes a Miércoles, 11 am - 11pm; Jueves y Viernes, 11 am - 12 md; Domingo, 5 pm - 12 am", 
+	thumb: "http://vivaelmenu.com/wp-content/uploads/2013/03/filename-dscn0033-jpg-150x105.jpg" ,
+	zona: "San Pedro"
+} )
 
 
 Restaurant.selected;

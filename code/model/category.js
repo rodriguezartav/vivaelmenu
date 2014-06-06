@@ -14,10 +14,10 @@ Category.create( { name: "San Pedro" , type: "zona", flag: false  } )
 
 
 
-Category.create( { name: "Más de $30" , type: "precio", flag: true  } )
-Category.create( { name: "De $20 a $30" , type: "precio", flag: false  } )
-Category.create( { name: "De $12 a $20" , type: "precio", flag: false  } )
-Category.create( { name: "Hasta $12" , type: "precio", flag: false  } )
+Category.create( { name: "Más de $30" , type: "price", flag: true  } )
+Category.create( { name: "De $20 a $30" , type: "price", flag: false  } )
+Category.create( { name: "De $12 a $20" , type: "price", flag: false  } )
+Category.create( { name: "Hasta $12" , type: "price", flag: false  } )
 
 
 

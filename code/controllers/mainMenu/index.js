@@ -21,7 +21,7 @@ function onZonaClick(){
 }
 
 function onPrecioClick(){
-	loadFirstCategory("precio")
+	loadFirstCategory("price")
 }
 
 function loadFirstCategory(type){

@@ -1,6 +1,5 @@
-
 <div class="col-md-12">
-    <h3 class="h2"><%= @name %>
+    <h3 class="h2 targetScroll"><%= @name + ", " + @zona %>
       <button class="btn btn-default btn-lg pull-right text-danger"><span class="glyphicon glyphicon-thumbs-down"></span></button>
       <button class="btn btn-default btn-lg pull-right text-primary"><span class="glyphicon glyphicon-thumbs-up"></span></button>
     </h3>
@@ -9,16 +8,16 @@
 <div class="col-md-8">
   <!--Carousel-->
   <div id="carousel-fabbrica" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-          <div class="item">
-            <img data-src="" alt="First slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica1.jpg">   
-          </div>
-          <div class="item">
-            <img data-src="" alt="Second slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica2.jpg">
-          </div>
-          <div class="item active">
-            <img data-src="" alt="Third slide" src="//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_5/assets/fabbrica3.jpg">
-          </div>
+      <div class="carousel-inner" id="slidesView">
+        <div class="item">
+          <img src=<%= @pics[0] %> alt="">
+        </div>
+        <div class="item active">
+          <img src=<%= @pics[1] %> alt="">
+        </div>
+        <div class="item">
+          <img src=<%= @pics[2] %> alt="">
+        </div>
       </div><!--/Carousel Inner--> 
 
       <a class="left carousel-control" href="#carousel-fabbrica" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -30,12 +29,11 @@
 <div class="col-md-4">
     <ul class="list-group">
       <li class="list-group-item list-group-item-danger">Detalles</li>
-      <li class="list-group-item"><b>Dirección:</b> <%= @direccion %></li>
-      <li class="list-group-item">Compartir</li>
-      <li class="list-group-item">Facebook</li>
-      <li class="list-group-item"><b>Nombre del Retaurante:</b> La Fabbrica</li>
-      <li class="list-group-item"><b>Zona:</b> Escazu</li>
-      <li class="list-group-item"><b>Sucursales:</b> No</li>
+      <li class="list-group-item"><b><span class="glyphicon glyphicon-usd"></span>Precios:</b> <%= @price %></li>
+      <li class="list-group-item"><b>Zona:</b> <%= @zona %></li>
+      <li class="list-group-item"><b>Dirección:</b> <%= @address %></li>
+      <li class="list-group-item"><b>Horario</b> <%= @schedule %></li>
+      <li class="list-group-item"><b>Teléfono</b> <%= @phone %></li>
       <!-- Open Map Modal Trigger -->
       <li class="list-group-item">
         <a href="" class="btn btn-block" data-toggle="modal" data-target="#myModal">

@@ -137,7 +137,12 @@ a.list-group-item.active:focus {
     -moz-border-radius: 0;
     border-radius: 0;
 }
-
+/*----------------
+ListView
+-----------------*/
+#listView {
+    margin: 2em 0 0;
+}
 
 
 /*--------------
@@ -204,6 +209,7 @@ Main-Section
 
 .subtab-list .nav-tabs li {
     width: 33%;
+    height: 22em;
 }
 
 .tab-menu .dropdown-menu .list-group-item{

@@ -15,39 +15,9 @@ MainContent("mainContent")
 
 require("./managers/loadManager");
 
-/*
-//1: Define the Template to load when Device type is Desktop
 
-
-    $(".tab-menu>div.row>div.list-group a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $(".tab-list>div.viva-tab-content").removeClass("active");
-        $(".tab-list>div.viva-tab-content").eq(index).addClass("active");
-    });
-
-    $("#zone .tab-submenu a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("#zone .subtab-list .viva-tab-content").removeClass("active");
-        $("#zone .subtab-list .viva-tab-content").eq(index).addClass("active");
-    });
-
-   
-    $("#price .tab-submenu a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("#price .subtab-list .viva-tab-content").removeClass("active");
-        $("#price .subtab-list .viva-tab-content").eq(index).addClass("active");
-        console.log(index);   
-    });
-
-// var yes = require("./main");
-
-*/
+$(".scroll").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".targetScroll").offset().top
+    }, 1000);
+});

@@ -6,7 +6,7 @@ Stylesheet for Clay Documentation
 body {
     font-family: 'Josefin Slab', serif;
     color:#4d4d4d;
-    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9/assets/viva-bg.jpg);
+    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_10/assets/viva-bg.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     font-size: 16px;
@@ -33,7 +33,7 @@ Page Header
 ----------------*/
 
 header {
-    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9/assets/back_header.png);
+    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_10/assets/back_header.png);
     background-repeat: repeat-x;
     height: 60px;
     border-bottom: 1px solid rgba(0,0,0,.5);
@@ -45,7 +45,7 @@ header {
 }
 
 .logo {
-    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9/assets/viva-logo.png);
+    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_10/assets/viva-logo.png);
     -webkit-background-size: 100% auto;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@ FirstLevel Tabs
 */
 
 .tab-menu{
-    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9/assets/tab-bg.png);
+    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_10/assets/tab-bg.png);
     background-repeat: repeat-x;
     -webkit-border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
@@ -137,7 +137,12 @@ a.list-group-item.active:focus {
     -moz-border-radius: 0;
     border-radius: 0;
 }
-
+/*----------------
+ListView
+-----------------*/
+#listView {
+    margin: 2em 0 0;
+}
 
 
 /*--------------
@@ -204,6 +209,7 @@ Main-Section
 
 .subtab-list .nav-tabs li {
     width: 33%;
+    height: 22em;
 }
 
 .tab-menu .dropdown-menu .list-group-item{
@@ -238,7 +244,7 @@ figure>div {
     -moz-border-radius: 5px;
     border-radius: 5px;
     padding: .2em;
-    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_9/assets/loading.gif);
+    background-image: url(//daulau2emlz5i.cloudfront.net/3vot/vivaelmenu_10/assets/loading.gif);
     -webkit-background-size: 30px 30px;
     background-size: 30px 30px;
     background-repeat: no-repeat;
